@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position: absolute;
+}
+
+.wrapper {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* opacity: 0; */
+}
+
+/* @font-face {
+    font-family: 'Antonio';
+    src: url('Assets/subset-Antonio-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+} */
+.border,
+.canvCn,
+.border_ins,
+.logo {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+}
+
+.border {
+  box-sizing: border-box;
+  border: solid 7px #fff;
+  pointer-events: none;
+}
+
+.border_ins {
+  box-sizing: border-box;
+  border: solid 15px #fff;
+  border-radius: 40px;
+  pointer-events: none;
+}
+
+.logo {
+  pointer-events: none;
+}
+
+canvas {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.animCont {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: rotateReverse 2s infinite linear;
+}
+
+.content {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+
+  transform-style: preserve-3d;
+  animation: rotate 2s infinite linear;
+  transform: rotateX(10deg) rotateZ(0);
+}
+
+.bgCn {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+
+  /*background-image: linear-gradient(to right, rgba(31, 69, 145, 0.1) , rgba(129, 37, 121, 0.1));*/
+  /*border-radius: 20px;*/
+  /*box-shadow: 0 0 16px rgba(0, 0, 0, 0.45);*/
+  overflow: hidden;
+}
+
+.background {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+
+  /*background-image: linear-gradient(to right, rgba(31, 69, 145, 0.1) , rgba(129, 37, 121, 0.1));*/
+  /*background-image: url('hAssets/background.jpg');*/
+  opacity: 1;
+}
+
+.cover {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+
+  /*background-image: url('hAssets/cover.png');*/
+
+  transform: translateZ(40px) scale(0.9);
+}
+
+.t_l,
+.t_r,
+.b_l,
+.b_r {
+  width: 21px;
+  height: 21px;
+
+  background-color: #fff;
+}
+
+.tl {
+  top: 0;
+  left: 0;
+}
+
+.t_r {
+  top: 0;
+  right: 0;
+}
+
+.b_l {
+  bottom: 0;
+  left: 0;
+}
+
+.b_r {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateX(10deg) rotateZ(360deg);
+    transform: rotateX(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+  }
+}
